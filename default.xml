@@ -6,8 +6,9 @@
     remote="openlmis-origin"
     sync-j="4"/>
     
-  <project name="OpenLMIS/open-lmis"
+  <project name="joshzamor/open-lmis"
     remote="openlmis-origin"
+    revision="refs/heads/2.0-repo"
     path="."/>
 
   <project name="joshzamor/repopoc"
