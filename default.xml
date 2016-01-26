@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="openlmis-origin" fetch="https://github.com"/>
+  <default revision="refs/heads/master"
+    remote="openlmis-origin"
+    sync-j="4"/>
+    
+  <project name="OpenLMIS/open-lmis"
+    remote="openlmis-origin"
+    path="."/>
+
+  <project name="joshzamor/repopoc"
+    remote="openlmis-origin"
+    path="modules/repopoc"/>
+
+</manifest>
+
