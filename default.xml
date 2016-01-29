@@ -22,7 +22,6 @@
     
   <project name="open-lmis"
     remote="openlmis-origin"
-    revision="refs/heads/dev"
     path="."/>
 
 </manifest>
