@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ This program is part of the OpenLMIS logistics management information system platform software.
   ~ Copyright © 2016 VillageReach
@@ -12,7 +13,6 @@
   ~ If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
   -->
 
-<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
   <remote name="openlmis-origin" fetch="https://github.com/OpenLMIS"/>
