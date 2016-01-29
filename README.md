@@ -9,6 +9,7 @@ for OpenLMIS 2.0 for limited modularity support*
 1. Install and familiarize yourself with 
 [git-repo](https://code.google.com/p/git-repo/).
 2. Make a directory for OpenLMIS and init repo within it:
+  
   ```shell
   > mkdir openlmis
   > cd openlmis
