@@ -17,6 +17,7 @@
 
   <remote name="openlmis-origin" fetch="https://github.com/OpenLMIS"/>
   <default revision="refs/heads/master"
+    dest-branch="master"
     remote="openlmis-origin"
     sync-j="4"/>
     
