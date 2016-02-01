@@ -15,7 +15,15 @@ for OpenLMIS 2.0 for limited modularity support*
   > cd openlmis
   > repo init -u https://github.com/OpenLMIS/openlmis-repo
   ```
-3. Download OpenLMIS & standard module sources:  `repo sync`
+3. Download OpenLMIS & standard module sources:
+  
+  ```shell
+  > repo sync
+  checkout master/release branch to start from a stable release
+  > git checkout master
+  OR checkout dev to work from the latest development
+  > git checkout dev
+  ```
 4. Create a new module and write your source by following the instructions in 
 the [module-template](https://github.com/OpenLMIS/module-template) project.
 5. Manage your new module with repo by adding it to your local-manifest.  e.g.:
