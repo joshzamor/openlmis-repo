@@ -15,9 +15,8 @@
 
 <manifest>
 
-  <remote name="openlmis-origin" fetch="https://github.com/OpenLMIS"/>
-  <default revision="refs/heads/master"
-    dest-branch="master"
+  <remote name="openlmis-origin" fetch="https://github.com/joshzamor"/>
+  <default revision="refs/heads/dev"
     remote="openlmis-origin"
     sync-j="4"/>
     
