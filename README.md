@@ -24,7 +24,7 @@ repository in a local manifest of git-repo:
     > mkdir .repo/local_manifests
     > touch .repo/local_manifests/forked_openlmis.xml
     ```
-  2. in `forked\_openlmis.xml` reference your fork (replace <yourUserName>
+  2. in `forked_openlmis.xml` reference your fork (replace <yourUserName>
   with your GitHub account):
 
     ```xml
@@ -45,14 +45,14 @@ repository in a local manifest of git-repo:
   track OpenLMIS dev branch (for non-forked projects):
   > git checkout --track openlmis-origin/dev
   OR if you're on a forked OpenLMIS (see step 3):
-  git checkout --track forked-origin/dev
+  > git checkout --track forked-origin/dev
   ```
 5. Create a new module and write your source by following the instructions in 
 the [module-template](https://github.com/OpenLMIS/module-template) project.
 6. Manage your new module with repo by adding it to your local-manifest.  e.g.:
-  1. Ensure your local-manifest directory exists `mkdir .repo/local\_manifests/`
+  1. Ensure your local-manifest directory exists `mkdir .repo/local_manifests/`
   2. Make a manfiest file for your module `deliver` in 
-  `.repo/local\_manifests/deliver.xml`:
+  `.repo/local_manifests/deliver.xml`:
     
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
