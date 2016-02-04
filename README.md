@@ -15,21 +15,44 @@ for OpenLMIS 2.0 for limited modularity support*
   > cd openlmis
   > repo init -u https://github.com/OpenLMIS/openlmis-repo
   ```
-3. Download OpenLMIS & standard module sources:
+3. If you don't have permissions to contribute directly to OpenLMIS on GitHub, 
+create a fork for potential future pull-requests, then reference your forked
+repository in a local manifest of git-repo:
+  1. create local manifest dir:
+
+    ```shell
+    > mkdir .repo/local_manifests
+    > touch .repo/local_manifests/forked_openlmis.xml
+    ```
+  2. in `forked\_openlmis.xml` reference your fork (replace <yourUserName>
+  with your GitHub account):
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <manifest>
+      <remote name="forked-origin" fetch="https://github.com/<yourUserName>"/>
+      <remove-project name="open-lmis"/>
+      <project name="open-lmis"
+        revision="dev"
+        remote="forked_origin"
+        path="."/>
+    </manifest>
+    ```
+4. Download OpenLMIS & standard module sources:
   
   ```shell
   > repo sync
-  checkout master/release branch to start from a stable release
-  > git checkout master
-  OR checkout dev to work from the latest development
-  > git checkout dev
+  track OpenLMIS dev branch (for non-forked projects):
+  > git checkout --track openlmis-origin/dev
+  OR if you're on a forked OpenLMIS (see step 3):
+  git checkout --track forked-origin/dev
   ```
-4. Create a new module and write your source by following the instructions in 
+5. Create a new module and write your source by following the instructions in 
 the [module-template](https://github.com/OpenLMIS/module-template) project.
-5. Manage your new module with repo by adding it to your local-manifest.  e.g.:
-  1. Setup your local-manifest directory `mkdir .repo/local_manifests/`
+6. Manage your new module with repo by adding it to your local-manifest.  e.g.:
+  1. Ensure your local-manifest directory exists `mkdir .repo/local\_manifests/`
   2. Make a manfiest file for your module `deliver` in 
-  `.repo/local_manifests/deliver.xml`:
+  `.repo/local\_manifests/deliver.xml`:
     
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -44,6 +67,6 @@ the [module-template](https://github.com/OpenLMIS/module-template) project.
     ```
     *replace `yourName` with the account name you have your module at.  
     e.g. https://github.com/yourName/deliver*
-6. Customize your manifest further so that you properly commit sources to your
+7. Customize your manifest further so that you properly commit sources to your
 modules while still tracking OpenLMIS for the latest and greatest.
 
